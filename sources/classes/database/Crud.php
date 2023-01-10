@@ -78,7 +78,7 @@ class Crud extends Connection{
        $Filters = implode(' AND ',$Filters);
        $Data = implode(',',$Data);
 
-       self::$Syntax = "UPDATE $Table SET $Data WHERE $Filters";var_dump($Values);
+       self::$Syntax = "UPDATE $Table SET $Data WHERE $Filters";
        self::bindAndExecute($Values);
 
     }
@@ -105,7 +105,7 @@ class Crud extends Connection{
 
       self::$Syntax = $Syntax;
       self::bindAndExecute($Values,true);
-      
+
     }
 
     private static function bindAndExecute($Values,bool $Select = false){
